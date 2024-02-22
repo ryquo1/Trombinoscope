@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AppTrombinoscope.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AdresseIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Port" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Utilisateur" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MotDePasse" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Login" Type="System.String" Scope="User">
+      <Value Profile="(Default)">admin</Value>
+    </Setting>
+    <Setting Name="MotDePasseAppli" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Password1234!</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

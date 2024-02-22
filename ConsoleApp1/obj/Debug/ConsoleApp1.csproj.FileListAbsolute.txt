@@ -1,0 +1,14 @@
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\DllbddPersonnels.dll
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\Devart.Data.Linq.dll
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\Devart.Data.MySql.Linq.dll
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\Devart.Data.dll
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\Devart.Data.MySql.dll
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\bin\Debug\DllbddPersonnels.pdb
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache

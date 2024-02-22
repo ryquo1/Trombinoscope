@@ -1,0 +1,66 @@
+﻿<Window x:Class="AppTrombinoscope.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppTrombinoscope"
+        mc:Ignorable="d"
+        MinWidth="800"
+        MinHeight="450"
+        Title="Trombinoscope non connecter" Height="450" Width="800">
+    <Grid Background="#d3eae0" Margin="-4,0,-4,-4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="101*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="59*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="88*"/>
+            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <Menu Height="35" VerticalAlignment="Top" Grid.ColumnSpan="10" Margin="4,0,4.143,0" Width="auto">
+            <MenuItem x:Name="ConnexionBDDItemMenu" Header="Connexion BDD" Height="35" Width="124" FontSize="10" TextElement.FontWeight="Bold" Click="ConnexionBDDItemMenu_Click"/>
+            <MenuItem x:Name="ListePersonnelItemMenu" Header="Liste du Personnel" Height="35" Width="107" FontSize="10" TextElement.FontWeight="Bold" IsEnabled="False" Click="ListePersonnelItemMenu_Click"/>
+            <MenuItem x:Name="GestionServiceItemMenu" Header="Gestion : Services" Height="35" Width="107" FontSize="10" TextElement.FontWeight="Bold" IsEnabled="False" Click="GestionServiceItemMenu_Click"/>
+            <MenuItem x:Name="GestionFonctionItemMenu" Header="Gestion : Fonctions" Height="35" Width="116" FontSize="10" TextElement.FontWeight="Bold" IsEnabled="False" Click="GestionFonctionItemMenu_Click"/>
+            <MenuItem x:Name="GestionPersonnelItemMenu" Header="Gestion : Personnels" Height="35" Width="120" FontSize="10" TextElement.FontWeight="Bold" IsEnabled="False" Click="GestionPersonnelItemMenu_Click"/>
+            <MenuItem x:Name="GestionnaireItemMenu" Header="Gestionnaire" Height="35" Width="90" FontSize="10" TextElement.FontWeight="Bold" Click="GestionnaireItemMenu_Click"/>
+            <MenuItem x:Name="ParametreBDDItemMenu" Header="Paramètre BDD" Height="35" Width="107" FontSize="10" TextElement.FontWeight="Bold" Click="ParametreBDDItemMenu_Click"/>
+        </Menu>
+        <Label Content="Services" Margin="40,20,32,12" TextElement.FontWeight="Bold" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.561,0.267"/>
+        <Label Content="Fonctions" Margin="36.373,20,24.627,12" TextElement.FontWeight="Bold" Grid.Column="3" Grid.Row="1"/>
+        <Label Content="Membres" Margin="34.373,20,30.627,12" TextElement.FontWeight="Bold" Grid.Column="5" Grid.Row="1"/>
+        <Label Content="Nom:" Margin="37.373,0,9.627,0" VerticalAlignment="Top" TextElement.FontWeight="Bold" Grid.Column="7" Height="26" Grid.Row="2"/>
+        <Label Content="Prenom :" Margin="17.373,0,9.627,0" TextElement.FontWeight="Bold" Grid.Column="7" Grid.Row="4" Height="26" VerticalAlignment="Top"/>
+        <Label Content="Service :" Margin="21.373,0,9.627,0" VerticalAlignment="Top" TextElement.FontWeight="Bold" Grid.Column="7" Height="26" Grid.Row="6"/>
+        <Label Content="Fonction :" Margin="12.373,0,9.627,0" VerticalAlignment="Top" TextElement.FontWeight="Bold" Grid.Column="7" Height="26" Grid.Row="8"/>
+        <Label Content="Téléphone :" Margin="3.373,0,9.627,0" VerticalAlignment="Top" TextElement.FontWeight="Bold" Grid.Column="7" Height="26" Grid.Row="10" RenderTransformOrigin="0.493,1.154"/>
+        <ListView Name="ServiceView" Background="#bdcdca" Grid.Column="1" Grid.Row="2" Grid.RowSpan="9"/>
+        <ListView Name="FonctionView" Background="#bdcdca" Grid.Column="3" Grid.Row="2" Grid.RowSpan="9"/>
+        <ListView Name="MembresView" Margin="0.373,0,24.627,0" Background="#bdcdca" Grid.Column="5" Grid.Row="2" Grid.RowSpan="9" Grid.ColumnSpan="2"/>
+        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="2" Margin="0.373,0,0.627,0"/>
+        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="4" Margin="0.373,0,0.627,0"/>
+        <TextBox Name="ServiceTB" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="6" Margin="0.373,0,0.627,0"/>
+        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="8" Margin="0.373,0,0.627,0"/>
+        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="10" Margin="0.373,0,0.627,0"/>
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="94" Margin="10.373,8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="99"/>
+
+    </Grid>
+</Window>
