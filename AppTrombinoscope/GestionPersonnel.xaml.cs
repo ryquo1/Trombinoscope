@@ -11,8 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using DllbddPersonnels;
-using BddpersonnelContext;
 
 namespace AppTrombinoscope
 {
@@ -21,25 +19,9 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class GestionPersonnel : Window
     {
-        private bddpersonnels bdd;
         public GestionPersonnel()
         {
             InitializeComponent();
-            bdd = new bddpersonnels(
-                    Properties.Settings.Default.AdresseIP,
-                    Properties.Settings.Default.Port,
-                    Properties.Settings.Default.Utilisateur,
-                    Properties.Settings.Default.MotDePasse);
-
-            foreach (Personnel p in bdd.ListePersonnel())
-            {
-                ListePersonnel.Items.Add(p.Nom);
-            }
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
 
         }
     }

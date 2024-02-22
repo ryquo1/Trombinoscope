@@ -16,9 +16,6 @@ using BddpersonnelContext;
 
 namespace AppTrombinoscope
 {
-    /// <summary>
-    /// Logique d'interaction pour GestionService.xaml
-    /// </summary>
     public partial class GestionService : Window
     {
 

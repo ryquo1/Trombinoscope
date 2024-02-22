@@ -7,25 +7,19 @@
         ResizeMode="NoResize"
         Title="GestionPersonnel" Height="450" Width="800" Background="#FFCED4CE">
     <Grid>
-        <ListView Name="ListePersonnel" HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279">
-        </ListView>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="508,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.066"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <Label Margin="391,65,298,331">Nom de l'agent :</Label>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
-        <Button Content="Modifier" HorizontalAlignment="Left" Margin="385,175,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button Content="Supprimer" HorizontalAlignment="Left" Margin="385,343,0,0" VerticalAlignment="Top" Width="109"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="385,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="false"/>
-        <Button Content="Valider" HorizontalAlignment="Left" Margin="385,269,0,0" VerticalAlignment="Top" Width="109" IsEnabled="false"/>
-        <Button Content="Quitter" HorizontalAlignment="Left" Margin="657,367,0,0" VerticalAlignment="Top" Width="109"/>
-
+        <Label Margin="119,20,522,334" Content="Nom"/>
+        <Label Margin="119,87,522,267" Content="prénom"/>
+        <Label Margin="119,161,522,193" Content="Téléphone"/>
+        <TextBox Margin="226,20,385,363"></TextBox>
+        <TextBox Margin="226,92,385,297"/>
+        <TextBox Margin="226,161,385,220"/>
+        <Image Margin="539,47,94,238"></Image>
+        <Button Margin="258,218,434,176"> choisir photo</Button>
+        <Label Content="choisir le service" Margin="10,233,677,154"/>
+        <Label Content="choisir la fonction" Margin="593,218,94,169"/>
+        <ListView Margin="32,272,586,25"></ListView>
+        <ListView Margin="580,272,38,25"></ListView>
+        <Button Margin="226,354,419,25" Content="Enregistrer"></Button>
+        <Button Margin="407,354,238,25" Content="Annuler"></Button>
     </Grid>
 </Window>
