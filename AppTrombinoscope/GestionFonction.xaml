@@ -9,7 +9,7 @@
     <Grid>
         <ListView Name="ListeFonction"  HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279">
         </ListView>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="508,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5">
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="508,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -19,13 +19,13 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Margin="385,65,285,331">Nom de la fonction :</Label>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
-        <Button Content="Modifier" HorizontalAlignment="Left" Margin="385,175,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button Content="Supprimer" HorizontalAlignment="Left" Margin="385,343,0,0" VerticalAlignment="Top" Width="109"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="385,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="false"/>
-        <Button Content="Valider" HorizontalAlignment="Left" Margin="385,269,0,0" VerticalAlignment="Top" Width="109" IsEnabled="false"/>
-        <Button Content="Quitter" HorizontalAlignment="Left" Margin="657,367,0,0" VerticalAlignment="Top" Width="109"/>
+        <Label Margin="385,58,285,301">Nom de la fonction :</Label>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button Content="Modifier" HorizontalAlignment="Left" Margin="385,157,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button Content="Supprimer" HorizontalAlignment="Left" Margin="385,283,0,0" VerticalAlignment="Top" Width="109"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="385,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="false"/>
+        <Button Content="Valider" HorizontalAlignment="Left" Margin="385,243,0,0" VerticalAlignment="Top" Width="109" IsEnabled="false"/>
+        <Button Content="Quitter" HorizontalAlignment="Left" Margin="658,367,0,0" VerticalAlignment="Top" Width="109"/>
 
     </Grid>
 </Window>

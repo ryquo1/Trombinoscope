@@ -19,7 +19,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Margin="391,66,298,325">Nom du service :</Label>
+        <Label Margin="401,63,288,324">Nom du service :</Label>
         <Button Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
         <Button Content="Modifier" HorizontalAlignment="Left" Margin="385,175,0,0" VerticalAlignment="Top" Width="109"/>
         <Button Content="Supprimer" HorizontalAlignment="Left" Margin="385,343,0,0" VerticalAlignment="Top" Width="109"/>

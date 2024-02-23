@@ -25,6 +25,16 @@ namespace AppTrombinoscope
         {
             InitializeComponent();
 
+            foreach(Service s in bdd.ListServices())
+            {
+                ListeService.Items.Add(s.Intitule);
+            }
+
+            foreach(Fonction f in bdd.ListeFonction())
+            {
+                ListeFonction.Items.Add(f.Intitule);
+            }
+
         }
     }
 }
