@@ -19,16 +19,9 @@ namespace AppTrombinoscope
     public partial class GestionService : Window
     {
 
-        private bddpersonnels bdd;
-
-        public GestionService()
+        public GestionService(bddpersonnels bdd)
         {
             InitializeComponent();
-            bdd = new bddpersonnels(
-                    Properties.Settings.Default.AdresseIP,
-                    Properties.Settings.Default.Port,
-                    Properties.Settings.Default.Utilisateur,
-                    Properties.Settings.Default.MotDePasse);
 
             foreach (Service s in bdd.ListServices())
             {

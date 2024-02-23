@@ -22,6 +22,9 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        public bddpersonnels bdd;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -38,7 +41,7 @@ namespace AppTrombinoscope
 
             try
             {
-                bddpersonnels bdd = new bddpersonnels(
+                 bdd = new bddpersonnels(
                     Properties.Settings.Default.AdresseIP, 
                     Properties.Settings.Default.Port, 
                     Properties.Settings.Default.Utilisateur, 
@@ -80,25 +83,25 @@ namespace AppTrombinoscope
 
         private void ListePersonnelItemMenu_Click(object sender, RoutedEventArgs e)
         {
-            ListePersonnel listePersonnel = new ListePersonnel();
+            ListePersonnel listePersonnel = new ListePersonnel(bdd);
             listePersonnel.ShowDialog();
         }
 
         private void GestionPersonnelItemMenu_Click(object sender, RoutedEventArgs e)
         {
-            GestionPersonnel gestionPersonnel = new GestionPersonnel();
+            GestionPersonnel gestionPersonnel = new GestionPersonnel(bdd);
             gestionPersonnel.ShowDialog();
         }
 
         private void GestionFonctionItemMenu_Click(object sender, RoutedEventArgs e)
         {
-            GestionFonction gestionFonction = new GestionFonction();
+            GestionFonction gestionFonction = new GestionFonction(bdd);
             gestionFonction.ShowDialog();
         }
 
         private void GestionServiceItemMenu_Click(object sender, RoutedEventArgs e)
         {
-            GestionService gestionService = new GestionService();
+            GestionService gestionService = new GestionService(bdd);
             gestionService.ShowDialog();
         }
     }

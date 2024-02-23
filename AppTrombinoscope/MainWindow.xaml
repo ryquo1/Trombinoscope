@@ -56,10 +56,10 @@
         <ListView Name="FonctionView" Background="#bdcdca" Grid.Column="3" Grid.Row="2" Grid.RowSpan="9"/>
         <ListView Name="MembresView" Margin="0.373,0,24.627,0" Background="#bdcdca" Grid.Column="5" Grid.Row="2" Grid.RowSpan="9" Grid.ColumnSpan="2"/>
         <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="2" Margin="0.373,0,0.627,0"/>
-        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="4" Margin="0.373,0,0.627,0"/>
-        <TextBox Name="ServiceTB" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="6" Margin="0.373,0,0.627,0"/>
-        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="8" Margin="0.373,0,0.627,0"/>
-        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="10" Margin="0.373,0,0.627,0"/>
+        <TextBox Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="4" Margin="0.373,0,0.627,0"/>
+        <TextBox Name="ServiceTB" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="6" Margin="0.373,0,0.627,0"/>
+        <TextBox Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="8" Margin="0.373,0,0.627,0"/>
+        <TextBox TextWrapping="Wrap" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="10" Margin="0.373,0,0.627,0" Height="24" VerticalAlignment="Top"/>
         <Image Grid.Column="8" HorizontalAlignment="Left" Height="94" Margin="10.373,8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="99"/>
 
     </Grid>

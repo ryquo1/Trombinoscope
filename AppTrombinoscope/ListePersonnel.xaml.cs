@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DllbddPersonnels;
+using BddpersonnelContext;
 
 namespace AppTrombinoscope
 {
@@ -19,7 +21,7 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class ListePersonnel : Window
     {
-        public ListePersonnel()
+        public ListePersonnel(bddpersonnels bdd)
         {
             InitializeComponent();
         }

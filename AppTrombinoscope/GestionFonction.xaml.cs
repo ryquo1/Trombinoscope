@@ -21,15 +21,10 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class GestionFonction : Window
     {
-        private bddpersonnels bdd;
-        public GestionFonction()
+
+        public GestionFonction(bddpersonnels bdd)
         {
             InitializeComponent();
-            bdd = new bddpersonnels(
-                    Properties.Settings.Default.AdresseIP,
-                    Properties.Settings.Default.Port,
-                    Properties.Settings.Default.Utilisateur,
-                    Properties.Settings.Default.MotDePasse);
 
             foreach (Fonction f in bdd.ListeFonction())
             {
@@ -37,6 +32,7 @@ namespace AppTrombinoscope
             }
 
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
