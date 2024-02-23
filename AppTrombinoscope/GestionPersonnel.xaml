@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="GestionPersonnel" Height="450" Width="800" Background="#FFCED4CE">
+        Title="GestionPersonnel" Height="600" Width="800" Background="#FFCED4CE">
     <Grid>
-        <Label Margin="119,20,522,334" Content="Nom"/>
-        <Label Margin="119,87,522,267" Content="prénom"/>
-        <Label Margin="119,161,522,193" Content="Téléphone"/>
-        <TextBox Margin="226,20,385,363"></TextBox>
-        <TextBox Margin="226,92,385,297"/>
-        <TextBox Margin="226,161,385,220"/>
-        <Image Margin="539,47,94,238"></Image>
-        <Button Margin="258,218,434,176"> choisir photo</Button>
-        <Label Content="choisir le service" Margin="10,233,677,154"/>
-        <Label Content="choisir la fonction" Margin="593,218,94,169"/>
-        <ListView Margin="32,272,586,25"></ListView>
-        <ListView Margin="580,272,38,25"></ListView>
-        <Button Margin="226,354,419,25" Content="Enregistrer"></Button>
-        <Button Margin="407,354,238,25" Content="Annuler"></Button>
+        <Label Margin="85,70,661,477" Content="Nom" FontWeight="Bold"/>
+        <Label Margin="85,110,642,434" Content="prénom" FontWeight="Bold"/>
+        <Label Margin="85,153,633,393" Content="Téléphone" FontWeight="Bold"/>
+        <TextBox Margin="186,70,425,477"></TextBox>
+        <TextBox Margin="186,110,425,434"/>
+        <TextBox Margin="186,153,425,393"/>
+        <Image Margin="565,88,68,343"></Image>
+        <Button Margin="186,231,498,318" FontWeight="Bold"> choisir photo</Button>
+        <Label Content="choisir le service" Margin="148,272,539,265" FontWeight="Bold" RenderTransformOrigin="-0.411,0.412"/>
+        <Label Content="choisir la fonction" Margin="540,272,132,267" FontWeight="Bold"/>
+        <ListView Margin="85,311,471,91"></ListView>
+        <ListView Margin="458,311,85,91"></ListView>
+        <Button Margin="124,508,521,39" Content="Enregistrer"></Button>
+        <Button Margin="513,508,132,39" Content="Annuler"></Button>
     </Grid>
 </Window>

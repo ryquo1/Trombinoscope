@@ -9,3 +9,14 @@
 \\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.csproj.CopyComplete
 \\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.dll
 \\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.pdb
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\bin\Debug\DllbddPersonnels.dll
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\bin\Debug\DllbddPersonnels.pdb
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\bin\Debug\Devart.Data.dll
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\bin\Debug\Devart.Data.Linq.dll
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\bin\Debug\Devart.Data.MySql.dll
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\bin\Debug\Devart.Data.MySql.Linq.dll
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.csprojAssemblyReference.cache
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.csproj.CoreCompileInputs.cache
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.csproj.CopyComplete
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.dll
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\DllbddPersonnels\obj\Debug\DllbddPersonnels.pdb

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\AppTrombinoscope\obj\Debug\
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\AppTrombinoscope\obj\Debug\
 AppTrombinoscope
 none
 false
 DEBUG;TRACE
-\\calebasse\snith221\Documents\Semestre 4\R4.01\TPpersonnelArthurValentin\SolutionTrombinoscope\AppTrombinoscope\App.xaml
+\\calebasse\delcour221\Documents\Semestre_4\R4.01\TpNoté\Trombinoscope\AppTrombinoscope\App.xaml
 8-295718191
 
 141371404623
-141598208170
+141379314775
 AjoutPersonnel.xaml;Authentification.xaml;GestionFonction.xaml;GestionPersonnel.xaml;GestionService.xaml;ListePersonnel.xaml;MainWindow.xaml;ParamètreBDD.xaml;
 
-False
+True
 
