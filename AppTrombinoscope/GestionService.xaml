@@ -9,23 +9,15 @@
     <Grid>
         <ListView Name="ListeService" HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279">
         </ListView>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="508,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.066"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
+        <TextBox Name="ServiceAddNameTb" HorizontalAlignment="Left" Height="23" Margin="508,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5"/>
+
         <Label Margin="401,63,288,324">Nom du service :</Label>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
-        <Button Content="Modifier" HorizontalAlignment="Left" Margin="385,175,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button Content="Supprimer" HorizontalAlignment="Left" Margin="385,343,0,0" VerticalAlignment="Top" Width="109"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="385,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="false"/>
-        <Button Content="Valider" HorizontalAlignment="Left" Margin="385,269,0,0" VerticalAlignment="Top" Width="109" IsEnabled="false"/>
-        <Button Content="Quitter" HorizontalAlignment="Left" Margin="657,367,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button Name="AjouterBt" Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109" Click="AjouterBt_Click"/>
+        <Button Name="ModifierBt" Content="Modifier" HorizontalAlignment="Left" Margin="385,175,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button Name="SupprimerBt" Content="Supprimer" HorizontalAlignment="Left" Margin="385,343,0,0" VerticalAlignment="Top" Width="109"/>
+        <TextBox Name="NameModificationTb" HorizontalAlignment="Left" Height="23" Margin="385,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="false"/>
+        <Button Name="ValiderBt" Content="Valider" HorizontalAlignment="Left" Margin="385,269,0,0" VerticalAlignment="Top" Width="109" IsEnabled="false"/>
+        <Button Name="QuitterBt" Content="Quitter" HorizontalAlignment="Left" Margin="657,367,0,0" VerticalAlignment="Top" Width="109"/>
 
     </Grid>
 </Window>

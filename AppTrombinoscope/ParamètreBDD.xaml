@@ -15,7 +15,7 @@
         <TextBox Name="AdresseIPTB" HorizontalAlignment="Left" Height="23" Margin="232,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBox Name="PortTB" HorizontalAlignment="Left" Height="23" Margin="232,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBox Name="UtilisateurTB" HorizontalAlignment="Left" Height="23" Margin="232,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <TextBox Name="MotDePasseTB" HorizontalAlignment="Left" Height="23" Margin="232,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" />
+        <PasswordBox Name="MotDePasseTB" HorizontalAlignment="Left" Height="23" Margin="232,148,0,0" VerticalAlignment="Top" Width="200" />
         <Button Name="EnregistrerBT" Content="Enregistrer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="134" Margin="64,239,0,0" Click="EnregistrerBT_Click"/>
         <Button Name="AnnulerBT" Content="Annuler" HorizontalAlignment="Left" Margin="283,239,0,0" VerticalAlignment="Top" Width="134" Click="AnnulerBT_Click"/>
 

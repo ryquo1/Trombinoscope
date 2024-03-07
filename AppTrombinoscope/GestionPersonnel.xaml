@@ -7,19 +7,19 @@
         ResizeMode="NoResize"
         Title="GestionPersonnel" Height="600" Width="800" Background="#FFCED4CE">
     <Grid>
-        <Label Margin="85,70,622,466" Content="Nom" FontWeight="Bold"/>
-        <Label Margin="85,110,622,423" Content="prénom" FontWeight="Bold"/>
+        <Label Margin="85,75,622,461" Content="Nom" FontWeight="Bold"/>
+        <Label Margin="85,115,622,418" Content="prénom" FontWeight="Bold"/>
         <Label Margin="85,153,622,381" Content="Téléphone" FontWeight="Bold"/>
-        <TextBox Margin="186,70,425,477"></TextBox>
-        <TextBox Margin="186,110,425,434"/>
-        <TextBox Margin="186,153,425,393"/>
-        <Image Margin="458,19,85,343"></Image>
-        <Button Margin="219,194,451,343" FontWeight="Bold"> choisir photo</Button>
+        <TextBox Name="NomTb" Margin="186,70,425,469"></TextBox>
+        <TextBox Name="PrenomTb" Margin="186,110,425,423"/>
+        <TextBox Name="TelephoneTb" Margin="186,153,425,382"/>
+        <Image Name="Image" Margin="458,19,85,343"></Image>
+        <Button Name="ImageBt" Margin="219,194,451,343" FontWeight="Bold"> choisir photo</Button>
         <Label Content="choisir le service" Margin="124,258,521,260" FontWeight="Bold" RenderTransformOrigin="-0.411,0.412"/>
         <Label Content="choisir la fonction" Margin="513,258,132,260" FontWeight="Bold"/>
         <ListView Name="ListeService" Margin="85,311,471,91"></ListView>
         <ListView Name="ListeFonction" Margin="458,311,85,91"></ListView>
-        <Button Margin="124,502,521,34" Content="Enregistrer"></Button>
-        <Button Margin="513,502,132,34" Content="Annuler"></Button>
+        <Button Name="SaveBt" Margin="124,502,521,34" Content="Enregistrer" Click="SaveBt_Click"></Button>
+        <Button Name="AnnuleBt" Margin="513,502,132,34" Content="Annuler"></Button>
     </Grid>
 </Window>

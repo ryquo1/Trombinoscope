@@ -18,9 +18,10 @@ namespace AppTrombinoscope
 {
     public partial class GestionService : Window
     {
-
+        bddpersonnels bddpersonnels;
         public GestionService(bddpersonnels bdd)
         {
+            bddpersonnels = bdd;
             InitializeComponent();
 
             foreach (Service s in bdd.ListServices())
@@ -29,9 +30,12 @@ namespace AppTrombinoscope
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AjouterBt_Click(object sender, RoutedEventArgs e)
         {
+            string intitule = ServiceAddNameTb.Text;
+            ServiceAddNameTb.Text = "";
 
+            bddpersonnels.InsertService(intitule);
         }
     }
 }
