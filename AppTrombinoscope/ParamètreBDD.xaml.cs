@@ -25,7 +25,7 @@ namespace AppTrombinoscope
             AdresseIPTB.Text = Properties.Settings.Default.AdresseIP;
             PortTB.Text = Properties.Settings.Default.Port;
             UtilisateurTB.Text = Properties.Settings.Default.Utilisateur;
-            MotDePasseTB.Text = Properties.Settings.Default.MotDePasse;
+            MotDePasseTB.Password = Properties.Settings.Default.MotDePasse;
         }
 
         private void AnnulerBT_Click(object sender, RoutedEventArgs e)
@@ -44,7 +44,7 @@ namespace AppTrombinoscope
             String utilisateurTB = UtilisateurTB.Text;
             Properties.Settings.Default.Utilisateur = utilisateurTB;
 
-            String motDePasseTB = MotDePasseTB.Text;
+            String motDePasseTB = MotDePasseTB.Password;
             Properties.Settings.Default.MotDePasse = motDePasseTB;
 
             Properties.Settings.Default.Save();

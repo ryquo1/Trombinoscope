@@ -28,7 +28,7 @@ namespace AppTrombinoscope
 
             foreach (Fonction f in bdd.ListeFonction())
             {
-                ListeFonction.Items.Add(f.Intitule);
+                ListeFonction.Items.Add(new MyItem { Name = f.Intitule });
             }
 
         }

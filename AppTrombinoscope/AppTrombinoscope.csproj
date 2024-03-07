@@ -64,6 +64,7 @@
     <Compile Include="GestionService.xaml.cs">
       <DependentUpon>GestionService.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ServiceItem.cs" />
     <Compile Include="Settings.cs" />
     <Page Include="AjoutPersonnel.xaml">
       <SubType>Designer</SubType>

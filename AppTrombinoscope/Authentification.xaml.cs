@@ -21,7 +21,9 @@ namespace AppTrombinoscope
     {
         public Authentification()
         {
+            
             InitializeComponent();
+            UserTextField.Text = Properties.Settings.Default.Login;
         }
 
         private void BtAnnuler_Click(object sender, RoutedEventArgs e)
@@ -33,7 +35,7 @@ namespace AppTrombinoscope
         {
             String nom = UserTextField.Text;
             String DefaultLogin = Properties.Settings.Default.Login;
-            String mdp = PasswordTextField.Text;
+            String mdp = PasswordTextField.Password;
             String defaultMdp = Properties.Settings.Default.MotDePasseAppli;
 
             if (nom == DefaultLogin && mdp == defaultMdp)
@@ -49,7 +51,7 @@ namespace AppTrombinoscope
             {
                 MessageBox.Show("Les identifiant ne sont pas bon");
                 UserTextField.Text = "";
-                PasswordTextField.Text = "";
+                PasswordTextField.Password = "";
             }
         }
     }

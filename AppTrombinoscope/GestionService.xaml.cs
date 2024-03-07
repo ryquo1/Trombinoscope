@@ -26,7 +26,7 @@ namespace AppTrombinoscope
 
             foreach (Service s in bdd.ListServices())
             {
-                ListeService.Items.Add(s.Intitule);
+                ListeService.Items.Add(new ServiceItem {Name = s.Intitule });
             }
         }
 

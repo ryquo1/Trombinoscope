@@ -7,7 +7,12 @@
         ResizeMode="NoResize"
         Title="GestionService" Height="450" Width="800" Background="#FFCED4CE">
     <Grid>
-        <ListView Name="ListeService" HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279">
+        <ListView Name="ListeService" HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Service" Width="280" DisplayMemberBinding="{Binding Name}"/>
+                </GridView>
+            </ListView.View>
         </ListView>
         <TextBox Name="ServiceAddNameTb" HorizontalAlignment="Left" Height="23" Margin="508,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5"/>
 
