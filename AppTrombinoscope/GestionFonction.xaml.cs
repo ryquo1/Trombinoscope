@@ -21,10 +21,12 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class GestionFonction : Window
     {
+        bddpersonnels bddPersonnels;
 
         public GestionFonction(bddpersonnels bdd)
         {
             InitializeComponent();
+            bddPersonnels = bdd;
 
             foreach (Fonction f in bdd.ListeFonction())
             {
@@ -32,5 +34,38 @@ namespace AppTrombinoscope
             }
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string intitule = NomFonctionText.Text;
+            NomFonctionText.Text = "";
+
+            if (!intitule.Equals(""))
+            {
+                bddPersonnels.InsertFonction(intitule);
+                updateList(bddPersonnels);
+            }
+        }
+
+
+        private void updateList(bddpersonnels bdd)
+        {
+            ListeFonction.Items.Clear();
+            foreach (Fonction f in bdd.ListeFonction())
+            {
+                ListeFonction.Items.Add(new MyItem { Name = f.Intitule });
+            }
+        }
+
+        private void SupprimerContextMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ALED");
+        }
+
+        private void modifierContextMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ALED");
+        }
+
     }
 }

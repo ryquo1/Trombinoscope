@@ -18,16 +18,13 @@ namespace AppTrombinoscope
 {
     public partial class GestionService : Window
     {
-        bddpersonnels bddpersonnels;
+        bddpersonnels bddPersonnels;
         public GestionService(bddpersonnels bdd)
         {
-            bddpersonnels = bdd;
+            bddPersonnels = bdd;
             InitializeComponent();
 
-            foreach (Service s in bdd.ListServices())
-            {
-                ListeService.Items.Add(new MyItem {Name = s.Intitule });
-            }
+            updateList(bddPersonnels);
         }
 
         private void AjouterBt_Click(object sender, RoutedEventArgs e)
@@ -35,7 +32,31 @@ namespace AppTrombinoscope
             string intitule = ServiceAddNameTb.Text;
             ServiceAddNameTb.Text = "";
 
-            bddpersonnels.InsertService(intitule);
+            if (!intitule.Equals(""))
+            {
+                bddPersonnels.InsertService(intitule);
+                updateList(bddPersonnels);
+            }
+            
+        }
+
+        private void updateList(bddpersonnels bdd)
+        {
+            ListeService.Items.Clear();
+            foreach (Service s in bdd.ListServices())
+            {
+                ListeService.Items.Add(new MyItem { Name = s.Intitule });
+            }
+        }
+
+        private void SupprimerContextMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ALED");
+        }
+
+        private void modifierContextMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("ALED");
         }
     }
 }

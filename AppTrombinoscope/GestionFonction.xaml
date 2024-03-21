@@ -13,8 +13,14 @@
                     <GridViewColumn Header="Fonction" Width="280" DisplayMemberBinding="{Binding Name}"/>
                 </GridView>
             </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="modifier" Name="modifierContextMenu" Click="modifierContextMenu_Click"/>
+                    <MenuItem Header="supprimer" Name="SupprimerContextMenu" Click="SupprimerContextMenu_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
         </ListView>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="508,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5">
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="510,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5" Name="NomFonctionText">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -24,13 +30,9 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Label Margin="385,58,285,301">Nom de la fonction :</Label>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button Content="Modifier" HorizontalAlignment="Left" Margin="385,157,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button Content="Supprimer" HorizontalAlignment="Left" Margin="385,283,0,0" VerticalAlignment="Top" Width="109"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="385,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="false"/>
-        <Button Content="Valider" HorizontalAlignment="Left" Margin="385,243,0,0" VerticalAlignment="Top" Width="109" IsEnabled="false"/>
-        <Button Content="Quitter" HorizontalAlignment="Left" Margin="658,367,0,0" VerticalAlignment="Top" Width="109"/>
+        <Label Margin="385,123,285,236">Nom de la fonction :</Label>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="400,202,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
+        <Button Content="Quitter" HorizontalAlignment="Left" Margin="658,202,0,0" VerticalAlignment="Top" Width="109"/>
 
     </Grid>
 </Window>

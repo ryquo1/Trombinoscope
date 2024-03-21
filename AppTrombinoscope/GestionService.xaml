@@ -13,16 +13,18 @@
                     <GridViewColumn Header="Service" Width="280" DisplayMemberBinding="{Binding Name}"/>
                 </GridView>
             </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="modifier" Name="modifierContextMenu" Click="modifierContextMenu_Click"/>
+                    <MenuItem Header="supprimer" Name="SupprimerContextMenu" Click="SupprimerContextMenu_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
         </ListView>
-        <TextBox Name="ServiceAddNameTb" HorizontalAlignment="Left" Height="23" Margin="508,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Name="ServiceAddNameTb" HorizontalAlignment="Left" Height="23" Margin="508,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.5,0.5"/>
 
-        <Label Margin="401,63,288,324">Nom du service :</Label>
-        <Button Name="AjouterBt" Content="Ajouter" HorizontalAlignment="Left" Margin="580,100,0,0" VerticalAlignment="Top" Width="109" Click="AjouterBt_Click"/>
-        <Button Name="ModifierBt" Content="Modifier" HorizontalAlignment="Left" Margin="385,175,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button Name="SupprimerBt" Content="Supprimer" HorizontalAlignment="Left" Margin="385,343,0,0" VerticalAlignment="Top" Width="109"/>
-        <TextBox Name="NameModificationTb" HorizontalAlignment="Left" Height="23" Margin="385,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="304" IsEnabled="false"/>
-        <Button Name="ValiderBt" Content="Valider" HorizontalAlignment="Left" Margin="385,269,0,0" VerticalAlignment="Top" Width="109" IsEnabled="false"/>
-        <Button Name="QuitterBt" Content="Quitter" HorizontalAlignment="Left" Margin="657,367,0,0" VerticalAlignment="Top" Width="109"/>
+        <Label Margin="379,127,310,258">Nom du service :</Label>
+        <Button Name="AjouterBt" Content="Ajouter" HorizontalAlignment="Left" Margin="434,224,0,0" VerticalAlignment="Top" Width="109" Click="AjouterBt_Click"/>
+        <Button Name="QuitterBt" Content="Quitter" HorizontalAlignment="Left" Margin="657,224,0,0" VerticalAlignment="Top" Width="109"/>
 
     </Grid>
 </Window>

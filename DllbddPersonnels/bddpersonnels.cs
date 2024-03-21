@@ -124,5 +124,20 @@ namespace DllbddPersonnels
                 throw;
             }
         }
+
+
+        public void DeleteFonction(Fonction fonction)
+        {
+            bdd.Fonctions.DeleteOnSubmit(fonction);
+            bdd.SubmitChanges();
+        }
+
+
+        public void DeleteService(Service service)
+        {
+            bdd.Services.DeleteOnSubmit(service);
+            bdd.SubmitChanges();
+        }
+
     }
 }
