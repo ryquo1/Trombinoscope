@@ -48,24 +48,14 @@ namespace AppTrombinoscope
                     Properties.Settings.Default.MotDePasse);
 
                 this.Title = "Trombinoscope Connecter";
-                ServiceView.Items.Clear();
-                FonctionView.Items.Clear();
-                MembresView.Items.Clear();
 
-                foreach (Service s in bdd.ListServices())
-                {
-                    ServiceView.Items.Add(s.Intitule);
-                }
+                ServiceView.DataContext = bdd.ListeServices();
 
-                foreach (Fonction f in bdd.ListeFonction())
-                {
-                    FonctionView.Items.Add(f.Intitule);
-                }
+                FonctionView.DataContext = bdd.ListeFonctions();
 
-                foreach (Personnel p in bdd.ListePersonnel())
-                {
-                    MembresView.Items.Add(p.Nom +" "+ p.Prenom);
-                }
+                MembresView.DataContext = bdd.ListePersonnel();
+
+                ((MainWindow)Application.Current.MainWindow).ListePersonnelItemMenu.IsEnabled = true;
             }
             catch
             {
@@ -103,6 +93,14 @@ namespace AppTrombinoscope
         {
             GestionService gestionService = new GestionService(bdd);
             gestionService.ShowDialog();
+        }
+        
+
+        public void AllUpdate()
+        {
+            MembresView.DataContext = bdd.ListePersonnel();
+            FonctionView.DataContext = bdd.ListeFonctions();
+            ServiceView.DataContext = bdd.ListeServices();
         }
     }
 }

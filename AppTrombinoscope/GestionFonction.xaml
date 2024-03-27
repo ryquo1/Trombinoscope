@@ -7,10 +7,10 @@
         ResizeMode="NoResize"
         Title="GestionFonction" Height="450" Width="800" Background="#FFCED4CE">
     <Grid>
-        <ListView Name="ListeFonction"  HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279">
+        <ListView Name="ListeFonction"  HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279" ItemsSource="{Binding Path=.}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Fonction" Width="280" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Fonction" Width="280" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View>
             <ListView.ContextMenu>
@@ -32,7 +32,7 @@
         </TextBox>
         <Label Margin="385,123,285,236">Nom de la fonction :</Label>
         <Button Content="Ajouter" HorizontalAlignment="Left" Margin="400,202,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
-        <Button Content="Quitter" HorizontalAlignment="Left" Margin="658,202,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button Content="Quitter" HorizontalAlignment="Left" Margin="658,202,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

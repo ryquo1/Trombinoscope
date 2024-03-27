@@ -28,10 +28,7 @@ namespace AppTrombinoscope
             InitializeComponent();
             bddPersonnels = bdd;
 
-            foreach (Fonction f in bdd.ListeFonction())
-            {
-                ListeFonction.Items.Add(new MyItem { Name = f.Intitule });
-            }
+            ListeFonction.DataContext = bdd.ListeFonctions();
 
         }
 
@@ -44,22 +41,21 @@ namespace AppTrombinoscope
             {
                 bddPersonnels.InsertFonction(intitule);
                 updateList(bddPersonnels);
+                ((MainWindow)Application.Current.MainWindow).AllUpdate();
             }
         }
 
 
         private void updateList(bddpersonnels bdd)
         {
-            ListeFonction.Items.Clear();
-            foreach (Fonction f in bdd.ListeFonction())
-            {
-                ListeFonction.Items.Add(new MyItem { Name = f.Intitule });
-            }
+            ListeFonction.DataContext = bdd.ListeFonctions();
         }
 
         private void SupprimerContextMenu_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("ALED");
+            Fonction fonction = (Fonction)ListeFonction.SelectedItem;
+            bddPersonnels.DeleteFonction(fonction);
+            updateList(bddPersonnels);
         }
 
         private void modifierContextMenu_Click(object sender, RoutedEventArgs e)
@@ -67,5 +63,9 @@ namespace AppTrombinoscope
             MessageBox.Show("ALED");
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

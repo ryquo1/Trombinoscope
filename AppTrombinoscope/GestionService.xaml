@@ -7,10 +7,10 @@
         ResizeMode="NoResize"
         Title="GestionService" Height="450" Width="800" Background="#FFCED4CE">
     <Grid>
-        <ListView Name="ListeService" HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279" >
+        <ListView Name="ListeService" HorizontalAlignment="Left" Height="360" Margin="65,27,0,0" VerticalAlignment="Top" Width="279" ItemsSource="{Binding Path=.}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Service" Width="280" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Service" Width="280" DisplayMemberBinding="{Binding Intitule}"/>
                 </GridView>
             </ListView.View>
             <ListView.ContextMenu>
@@ -24,7 +24,7 @@
 
         <Label Margin="379,127,310,258">Nom du service :</Label>
         <Button Name="AjouterBt" Content="Ajouter" HorizontalAlignment="Left" Margin="434,224,0,0" VerticalAlignment="Top" Width="109" Click="AjouterBt_Click"/>
-        <Button Name="QuitterBt" Content="Quitter" HorizontalAlignment="Left" Margin="657,224,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button Name="QuitterBt" Content="Quitter" HorizontalAlignment="Left" Margin="657,224,0,0" VerticalAlignment="Top" Width="109" Click="QuitterBt_Click"/>
 
     </Grid>
 </Window>

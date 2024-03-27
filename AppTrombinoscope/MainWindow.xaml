@@ -52,14 +52,47 @@
         <Label Content="Service :" Margin="21.373,0,9.627,0" VerticalAlignment="Top" TextElement.FontWeight="Bold" Grid.Column="7" Height="26" Grid.Row="6"/>
         <Label Content="Fonction :" Margin="12.373,0,9.627,0" VerticalAlignment="Top" TextElement.FontWeight="Bold" Grid.Column="7" Height="26" Grid.Row="8"/>
         <Label Content="Téléphone :" Margin="3.373,0,9.627,0" VerticalAlignment="Top" TextElement.FontWeight="Bold" Grid.Column="7" Height="26" Grid.Row="10" RenderTransformOrigin="0.493,1.154"/>
-        <ListView Name="ServiceView" Background="#bdcdca" Grid.Column="1" Grid.Row="2" Grid.RowSpan="9"/>
-        <ListView Name="FonctionView" Background="#bdcdca" Grid.Column="3" Grid.Row="2" Grid.RowSpan="9"/>
-        <ListView Name="MembresView" Margin="0.373,0,24.627,0" Background="#bdcdca" Grid.Column="5" Grid.Row="2" Grid.RowSpan="9" Grid.ColumnSpan="2"/>
-        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="2" Margin="0.373,0,0.627,0"/>
-        <TextBox Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="4" Margin="0.373,0,0.627,0"/>
-        <TextBox Name="ServiceTB" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="6" Margin="0.373,0,0.627,0"/>
-        <TextBox Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="8" Margin="0.373,0,0.627,0"/>
-        <TextBox TextWrapping="Wrap" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="10" Margin="0.373,0,0.627,0" Height="24" VerticalAlignment="Top"/>
+        <ListView Name="ServiceView" Background="#bdcdca" Grid.Column="1" Grid.Row="2" Grid.RowSpan="9" ItemsSource="{Binding Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <Binding Path="Intitule"/>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView Name="FonctionView" Background="#bdcdca" Grid.Column="3" Grid.Row="2" Grid.RowSpan="9" ItemsSource="{Binding Mode=OneWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <Binding Path="Intitule"/>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <ListView Name="MembresView" Margin="0.373,0,24.627,0" Background="#bdcdca" Grid.Column="5" Grid.Row="2" Grid.RowSpan="9" Grid.ColumnSpan="2" ItemsSource="{Binding Mode=OneWay}" SelectedItem="" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat=" {0} {1}">
+                                <Binding Path="Prenom"/>
+                                <Binding Path="Nom"/>
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBox Height="27" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="2" Margin="0.373,0,0.627,0" Text="{Binding SelectedItem.Nom, ElementName=MembresView}"/>
+        <TextBox Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="4" Margin="0.373,0,0.627,0" Text="{Binding SelectedItem.Prenom, ElementName=MembresView}"/>
+        <TextBox Name="ServiceTB" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="6" Margin="0.373,0,0.627,0" Text="{Binding SelectedItem.Service.Intitule, ElementName=MembresView}"/>
+        <TextBox Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="8" Margin="0.373,0,0.627,0" Text="{Binding SelectedItem.Fonction.Intitule, ElementName=MembresView}"/>
+        <TextBox TextWrapping="Wrap" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="10" Margin="0.373,0,0.627,0" Height="24" VerticalAlignment="Top" Text="{Binding SelectedItem.Telephone, ElementName=MembresView}"/>
         <Image Grid.Column="8" HorizontalAlignment="Left" Height="94" Margin="10.373,8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="99"/>
 
     </Grid>

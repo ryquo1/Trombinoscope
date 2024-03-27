@@ -14,11 +14,23 @@
         <TextBox Name="PrenomTb" Margin="186,110,425,423"/>
         <TextBox Name="TelephoneTb" Margin="186,153,425,382"/>
         <Image Name="Image" Margin="458,19,85,343"></Image>
-        <Button Name="ImageBt" Margin="219,194,451,343" FontWeight="Bold"> choisir photo</Button>
+        <Button Name="ImageBt" Margin="219,194,451,343" FontWeight="Bold" Click="ImageBt_Click"> choisir photo</Button>
         <Label Content="choisir le service" Margin="124,258,521,260" FontWeight="Bold" RenderTransformOrigin="-0.411,0.412"/>
         <Label Content="choisir la fonction" Margin="513,258,132,260" FontWeight="Bold"/>
-        <ListView Name="ListeService" Margin="85,311,471,91"></ListView>
-        <ListView Name="ListeFonction" Margin="458,311,85,91"></ListView>
+        <ListView Name="ListeService" Margin="85,311,471,91" ItemsSource="{Binding Path=.}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Path=Intitule, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView Name="ListeFonction" Margin="458,311,85,91"  ItemsSource="{Binding Path=.}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nom" DisplayMemberBinding="{Binding Path=Intitule, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
         <Button Name="SaveBt" Margin="124,502,521,34" Content="Enregistrer" Click="SaveBt_Click"></Button>
         <Button Name="AnnuleBt" Margin="513,502,132,34" Content="Annuler"></Button>
     </Grid>

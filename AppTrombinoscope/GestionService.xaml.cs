@@ -23,8 +23,8 @@ namespace AppTrombinoscope
         {
             bddPersonnels = bdd;
             InitializeComponent();
+            ListeService.DataContext = bdd.ListeServices();
 
-            updateList(bddPersonnels);
         }
 
         private void AjouterBt_Click(object sender, RoutedEventArgs e)
@@ -42,21 +42,24 @@ namespace AppTrombinoscope
 
         private void updateList(bddpersonnels bdd)
         {
-            ListeService.Items.Clear();
-            foreach (Service s in bdd.ListServices())
-            {
-                ListeService.Items.Add(new MyItem { Name = s.Intitule });
-            }
+            ListeService.DataContext = bdd.ListeServices();
         }
 
         private void SupprimerContextMenu_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("ALED");
+            Service service = (Service)ListeService.SelectedItem;
+            bddPersonnels.DeleteService(service);
+            updateList(bddPersonnels);
         }
 
         private void modifierContextMenu_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("ALED");
+        }
+
+        private void QuitterBt_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

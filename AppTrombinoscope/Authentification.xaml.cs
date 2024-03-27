@@ -41,7 +41,6 @@ namespace AppTrombinoscope
             if (nom == DefaultLogin && mdp == defaultMdp)
             {
                 this.Close();
-                ((MainWindow)Application.Current.MainWindow).ListePersonnelItemMenu.IsEnabled = true;
                 ((MainWindow)Application.Current.MainWindow).GestionFonctionItemMenu.IsEnabled = true;
                 ((MainWindow)Application.Current.MainWindow).GestionPersonnelItemMenu.IsEnabled = true;
                 ((MainWindow)Application.Current.MainWindow).GestionServiceItemMenu.IsEnabled = true;

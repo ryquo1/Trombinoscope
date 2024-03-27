@@ -7,15 +7,15 @@
         ResizeMode="NoResize"
         Title="ListePersonnel" Height="450" Width="800">
     <Grid Background="#d6e1e2">
-        <DataGrid Name="dataList" HorizontalAlignment="Left" Height="370" Margin="30,25,0,0" VerticalAlignment="Top" Width="540" Background="#8eb4ab" IsHitTestVisible="False">
+        <DataGrid Name="dataList" HorizontalAlignment="Left" Height="370" Margin="30,25,0,0" VerticalAlignment="Top" Width="540" Background="#8eb4ab" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding ID}"/>
-                <DataGridTextColumn Header="Nom" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nom" Binding="{Binding Nom}"/>
                 <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}"/>
                 <DataGridTextColumn Header="Photo" Binding="{Binding Photo}"/>
-                <DataGridTextColumn Header="Service" Binding="{Binding Service}"/>
-                <DataGridTextColumn Header="Fonction" Binding="{Binding Fonction}"/>
-                <DataGridTextColumn Header="Téléphone" Binding="{Binding Téléphone}"/>
+                <DataGridTextColumn Header="Service" Binding="{Binding IntituleService}"/>
+                <DataGridTextColumn Header="Fonction" Binding="{Binding IntituleFonction}"/>
+                <DataGridTextColumn Header="Téléphone" Binding="{Binding Telephone}"/>
             </DataGrid.Columns>
 
         </DataGrid>

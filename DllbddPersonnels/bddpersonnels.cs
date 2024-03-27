@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using BddpersonnelContext;
 
 namespace DllbddPersonnels
@@ -29,11 +31,16 @@ namespace DllbddPersonnels
             }
         }
 
-        public List<BddpersonnelContext.Service> ListServices()
+        public ObservableCollection<BddpersonnelContext.Service> ListeServices()
         {
+            ObservableCollection<BddpersonnelContext.Service> collection = new ObservableCollection<Service>();
             try
             {
-                return bdd.Services.ToList();
+                foreach (BddpersonnelContext.Service s in bdd.Services.ToList())
+                {
+                    collection.Add(s);
+                }
+                return collection;
             }
             catch
             {
@@ -42,11 +49,16 @@ namespace DllbddPersonnels
         }
 
 
-        public List<BddpersonnelContext.Fonction> ListeFonction()
+        public ObservableCollection<BddpersonnelContext.Fonction> ListeFonctions()
         {
+            ObservableCollection<BddpersonnelContext.Fonction> collection = new ObservableCollection<Fonction>();
             try
             {
-                return bdd.Fonctions.ToList();
+                foreach (BddpersonnelContext.Fonction f in bdd.Fonctions.ToList())
+                {
+                    collection.Add(f);
+                }
+                return collection;
             }
             catch
             {
@@ -55,11 +67,16 @@ namespace DllbddPersonnels
         }
 
 
-        public List<BddpersonnelContext.Personnel> ListePersonnel()
+        public ObservableCollection<BddpersonnelContext.Personnel> ListePersonnel()
         {
+            ObservableCollection<BddpersonnelContext.Personnel> collection = new ObservableCollection<Personnel>();
             try
             {
-                return bdd.Personnels.ToList();
+                foreach (BddpersonnelContext.Personnel p in bdd.Personnels.ToList())
+                {
+                    collection.Add(p);
+                }
+                return collection;
             }
             catch
             {
@@ -67,7 +84,32 @@ namespace DllbddPersonnels
             }
         }
 
-        public void InsertPersonnel(string prenom, string nom, int service, int fonction, string telephone)
+
+        public ObservableCollection<dynamic> AllListePersonnel()
+        {
+            
+            try
+            {
+                ObservableCollection<dynamic> collection = new ObservableCollection<dynamic>();
+                var requete = from personnel in bdd.Personnels
+                              join fonction in bdd.Fonctions on personnel.IdFonction equals fonction.Id
+                              join service in bdd.Services on personnel.IdService equals service.Id
+                              select new { personnel.Id, personnel.Nom, personnel.Prenom, personnel.Photo, IntituleService = service.Intitule, IntituleFonction = fonction.Intitule , personnel.Telephone};
+
+                foreach (var re in requete)
+                {
+                    collection.Add(re);
+                }
+                return collection;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
+        public void InsertPersonnel(string prenom, string nom, int service, int fonction, string telephone, byte[] photo)
         {
             Personnel personne = new Personnel
             {
@@ -76,7 +118,7 @@ namespace DllbddPersonnels
                 IdService = service + 1,
                 IdFonction = fonction + 1,
                 Telephone = telephone,
-                Photo = null
+                Photo = photo,
             };
 
             try
