@@ -93,7 +93,7 @@
         <TextBox Name="ServiceTB" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="6" Margin="0.373,0,0.627,0" Text="{Binding SelectedItem.Service.Intitule, ElementName=MembresView}"/>
         <TextBox Height="24" TextWrapping="Wrap" VerticalAlignment="Top" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="8" Margin="0.373,0,0.627,0" Text="{Binding SelectedItem.Fonction.Intitule, ElementName=MembresView}"/>
         <TextBox TextWrapping="Wrap" IsEnabled="False" Background="#bdcdca" Grid.Column="8" Grid.Row="10" Margin="0.373,0,0.627,0" Height="24" VerticalAlignment="Top" Text="{Binding SelectedItem.Telephone, ElementName=MembresView}"/>
-        <Image Grid.Column="8" HorizontalAlignment="Left" Height="94" Margin="10.373,8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="99"/>
+        <Image Grid.Column="8" HorizontalAlignment="Left" Height="94" Margin="10.373,8,0,0" Grid.Row="5" VerticalAlignment="Top" Width="99" Source="{Binding SelectedItem.Photo, ElementName=MembresView}"/>
 
     </Grid>
 </Window>

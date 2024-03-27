@@ -12,7 +12,13 @@
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Nom" Binding="{Binding Nom}"/>
                 <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}"/>
-                <DataGridTextColumn Header="Photo" Binding="{Binding Photo}"/>
+                <DataGridTemplateColumn Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Photo}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Service" Binding="{Binding IntituleService}"/>
                 <DataGridTextColumn Header="Fonction" Binding="{Binding IntituleFonction}"/>
                 <DataGridTextColumn Header="Téléphone" Binding="{Binding Telephone}"/>
