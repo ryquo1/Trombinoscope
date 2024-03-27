@@ -19,18 +19,6 @@ namespace DllbddPersonnels
             bdd = new BddpersonnelDataContext("User Id=" + user + ";Password=" + password + ";Host=" + host + ";Port=" + port + ";Database=bddpersonnels;Persist Security Info=True");
         }
 
-        public void TestBDD()
-        {
-            try
-            {
-                bdd.DatabaseExists();
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
         public ObservableCollection<BddpersonnelContext.Service> ListeServices()
         {
             ObservableCollection<BddpersonnelContext.Service> collection = new ObservableCollection<Service>();
@@ -87,14 +75,107 @@ namespace DllbddPersonnels
 
         public ObservableCollection<dynamic> AllListePersonnel()
         {
-            
+
             try
             {
                 ObservableCollection<dynamic> collection = new ObservableCollection<dynamic>();
                 var requete = from personnel in bdd.Personnels
                               join fonction in bdd.Fonctions on personnel.IdFonction equals fonction.Id
                               join service in bdd.Services on personnel.IdService equals service.Id
-                              select new { personnel.Id, personnel.Nom, personnel.Prenom, personnel.Photo, IntituleService = service.Intitule, IntituleFonction = fonction.Intitule , personnel.Telephone};
+                              select new { personnel.Id, personnel.Nom, personnel.Prenom, personnel.Photo, IntituleService = service.Intitule, IntituleFonction = fonction.Intitule, personnel.Telephone };
+
+                foreach (var re in requete)
+                {
+                    collection.Add(re);
+                }
+                return collection;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+
+        public ObservableCollection<dynamic> FilterPersonneNom(string text)
+        {
+            try
+            {
+                ObservableCollection<dynamic> collection = new ObservableCollection<dynamic>();
+                var requete = from personnel in bdd.Personnels
+                              join fonction in bdd.Fonctions on personnel.IdFonction equals fonction.Id
+                              join service in bdd.Services on personnel.IdService equals service.Id
+                              where (personnel.Nom.StartsWith(text))
+                              select new { personnel.Id, personnel.Nom, personnel.Prenom, personnel.Photo, IntituleService = service.Intitule, IntituleFonction = fonction.Intitule, personnel.Telephone };
+
+                foreach (var re in requete)
+                {
+                    collection.Add(re);
+                }
+                return collection;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public ObservableCollection<dynamic> FilterPersonnePrenom(string text)
+        {
+            try
+            {
+                ObservableCollection<dynamic> collection = new ObservableCollection<dynamic>();
+                var requete = from personnel in bdd.Personnels
+                              join fonction in bdd.Fonctions on personnel.IdFonction equals fonction.Id
+                              join service in bdd.Services on personnel.IdService equals service.Id
+                              where (personnel.Prenom.StartsWith(text))
+                              select new { personnel.Id, personnel.Nom, personnel.Prenom, personnel.Photo, IntituleService = service.Intitule, IntituleFonction = fonction.Intitule, personnel.Telephone };
+
+                foreach (var re in requete)
+                {
+                    collection.Add(re);
+                }
+                return collection;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public ObservableCollection<dynamic> FilterService(string text)
+        {
+            try
+            {
+                ObservableCollection<dynamic> collection = new ObservableCollection<dynamic>();
+                var requete = from personnel in bdd.Personnels
+                              join fonction in bdd.Fonctions on personnel.IdFonction equals fonction.Id
+                              join service in bdd.Services on personnel.IdService equals service.Id
+                              where (personnel.Service.Intitule.StartsWith(text))
+                              select new { personnel.Id, personnel.Nom, personnel.Prenom, personnel.Photo, IntituleService = service.Intitule, IntituleFonction = fonction.Intitule, personnel.Telephone };
+
+                foreach (var re in requete)
+                {
+                    collection.Add(re);
+                }
+                return collection;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public ObservableCollection<dynamic> FilterFonction(string text)
+        {
+            try
+            {
+                ObservableCollection<dynamic> collection = new ObservableCollection<dynamic>();
+                var requete = from personnel in bdd.Personnels
+                              join fonction in bdd.Fonctions on personnel.IdFonction equals fonction.Id
+                              join service in bdd.Services on personnel.IdService equals service.Id
+                              where (personnel.Fonction.Intitule.StartsWith(text))
+                              select new { personnel.Id, personnel.Nom, personnel.Prenom, personnel.Photo, IntituleService = service.Intitule, IntituleFonction = fonction.Intitule, personnel.Telephone };
 
                 foreach (var re in requete)
                 {
@@ -148,7 +229,7 @@ namespace DllbddPersonnels
                 throw;
             }
         }
-        
+
         public void InsertFonction(string intutile)
         {
             Fonction fonction = new Fonction

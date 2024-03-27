@@ -12,7 +12,7 @@
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Nom" Binding="{Binding Nom}"/>
                 <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}"/>
-                <DataGridTemplateColumn Width="100">
+                <DataGridTemplateColumn Width="100" Header="Photo">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Image Source="{Binding Photo}"/>
@@ -29,10 +29,10 @@
         <Label Content="Prénom du Personnel" HorizontalAlignment="Left" Margin="615,115,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
         <Label Content="Service du Personnel" HorizontalAlignment="Left" Margin="615,212,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
         <Label Content="Fonction du Personnel" HorizontalAlignment="Left" Margin="615,295,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox Name="BoxNom" HorizontalAlignment="Left" Height="23" Margin="615,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" TextChanged="BoxNom_TextChanged"/>
+        <TextBox Name="BoxPrenom" HorizontalAlignment="Left" Height="23" Margin="615,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" TextChanged="BoxPrenom_TextChanged"/>
+        <TextBox Name="BoxService" HorizontalAlignment="Left" Height="23" Margin="615,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" TextChanged="BoxService_TextChanged"/>
+        <TextBox Name="BoxFonction" HorizontalAlignment="Left" Height="23" Margin="615,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" TextChanged="BoxFonction_TextChanged"/>
 
     </Grid>
 </Window>

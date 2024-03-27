@@ -21,11 +21,38 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class ListePersonnel : Window
     {
+        bddpersonnels bddPersonnel;
         public ListePersonnel(bddpersonnels bdd)
         {
+            bddPersonnel = bdd;
             InitializeComponent();
             dataList.DataContext = bdd.AllListePersonnel();
         }
 
+
+        private void BoxNom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string mot = BoxNom.Text;
+            dataList.DataContext = bddPersonnel.FilterPersonneNom(mot);
+        }
+
+        private void BoxPrenom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string mot = BoxPrenom.Text;
+            dataList.DataContext = bddPersonnel.FilterPersonnePrenom(mot);
+        }
+
+
+        private void BoxService_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string mot = BoxService.Text;
+            dataList.DataContext = bddPersonnel.FilterService(mot);
+        }
+
+        private void BoxFonction_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string mot = BoxFonction.Text;
+            dataList.DataContext = bddPersonnel.FilterFonction(mot);
+        }
     }
 }
