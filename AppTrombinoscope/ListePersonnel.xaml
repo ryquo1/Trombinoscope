@@ -25,10 +25,14 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Label Content="Nom du Personnel" HorizontalAlignment="Left" Margin="615,130,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
-        <Label Content="Prénom du Personnel" HorizontalAlignment="Left" Margin="615,221,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,266,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <Label Content="Nom du Personnel" HorizontalAlignment="Left" Margin="615,40,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
+        <Label Content="Prénom du Personnel" HorizontalAlignment="Left" Margin="615,115,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
+        <Label Content="Service du Personnel" HorizontalAlignment="Left" Margin="615,212,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
+        <Label Content="Fonction du Personnel" HorizontalAlignment="Left" Margin="615,295,0,0" VerticalAlignment="Top" Width="131" TextElement.FontWeight="Bold"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="615,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
 
     </Grid>
 </Window>
